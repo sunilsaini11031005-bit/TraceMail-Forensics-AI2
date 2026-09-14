@@ -1,0 +1,33 @@
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
+
+# Real email corpora dropped into ml-training/data/ -- these contain real
+# people's mail and some licences forbid redistribution. Keep them local.
+ml-training/data/*
+!ml-training/data/README.md
+
+# Auto-generated JWT signing secret (server/index.js creates this on first
+# boot if JWT_SECRET isn't set in .env). Never commit it -- anyone with this
+# file can forge valid session tokens for any user.
+server/.jwt-secret.local
